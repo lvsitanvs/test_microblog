@@ -66,7 +66,7 @@ class User(db.Model):
             return str(self.id)  # python 3
 
     def avatar(self, size):
-        return 'http://www.gravatar.com/avatar/%s?d=mm&s=%d' % \
+        return 'http://www.gravatar.com/avatar/%s?d=mm&s=%d&r=x' % \
             (md5(self.email.encode('utf-8')).hexdigest(), size)
 
     def follow(self, user):
